@@ -99,17 +99,17 @@
       items: [
         {
           icon: 'mdi-view-dashboard',
-          title: 'Attendance List',
+          title: 'Kehadiran',
           to: '/attendance-list',
         },
         {
           icon: 'mdi-account-multiple',
-          title: 'Employee List',
+          title: 'Data Mahasiswa',
           to: '/employee',
         },
         {
           icon: 'mdi-account-plus',
-          title: 'Add Employee',
+          title: 'Tambah Mahasiswa',
           to: '/add-employee',
         },
         {
@@ -136,7 +136,7 @@
       profile () {
         return {
           avatar: true,
-          title: 'AARS v1.1',
+          title: 'Kehadiran',
         }
       },
     },

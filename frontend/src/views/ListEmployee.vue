@@ -7,7 +7,7 @@
         md="12">
         <base-material-card
           icon="mdi-account-multiple"
-          title="Employee List"
+          title="List Mahasiswa"
           class="px-5 py-3"
         >
           <div
@@ -23,7 +23,7 @@
           <div>
             <v-text-field
               v-model="search"
-              label="Search employee by name"
+              label="Search mahasiswa by name"
             />
             <b-table
               id="table-employee"

@@ -7,7 +7,7 @@
         md="12">
         <base-material-card
           icon="mdi-account-plus"
-          title="Add Employee"
+          title="Add Mahasiswa"
           class="px-5 py-3"
         > 
           <v-form>
@@ -18,7 +18,7 @@
                   md="6">
                   <v-text-field
                     v-model="nik"
-                    label="Employee ID"
+                    label="NIM Mahasiswa"
                     type="number"
                     outlined
                   />
@@ -28,7 +28,7 @@
                   md="6">
                   <v-text-field
                     v-model="nama"
-                    label="Employee Full Name"
+                    label="Nama Lengkap"
                     outlined
                   />
                 </v-col>
