@@ -7,7 +7,7 @@
         md="12">
         <base-material-card
           icon="mdi-account-plus"
-          title="Add Mahasiswa"
+          title="Tambah Mahasiswa"
           class="px-5 py-3"
         > 
           <v-form>
