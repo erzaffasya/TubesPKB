@@ -1,0 +1,89 @@
+CREATE TABLE public.karyawan (
+    nik character varying(20) NOT NULL,
+    nama text NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    active numeric NOT NULL
+);
+
+
+ALTER TABLE public.karyawan OWNER TO dbuser;
+
+--
+-- TOC entry 204 (class 1259 OID 16396)
+-- Name: kehadiran; Type: TABLE; Schema: public; Owner: dbuser
+--
+
+CREATE TABLE public.kehadiran (
+    id bigint NOT NULL,
+    nik_karyawan character varying(20) NOT NULL,
+    "timestamp" timestamp without time zone
+);
+
+
+ALTER TABLE public.kehadiran OWNER TO dbuser;
+
+--
+-- TOC entry 203 (class 1259 OID 16394)
+-- Name: kehadiran_id_seq; Type: SEQUENCE; Schema: public; Owner: dbuser
+--
+
+CREATE SEQUENCE public.kehadiran_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.kehadiran_id_seq OWNER TO dbuser;
+
+--
+-- TOC entry 2974 (class 0 OID 0)
+-- Dependencies: 203
+-- Name: kehadiran_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dbuser
+--
+
+ALTER SEQUENCE public.kehadiran_id_seq OWNED BY public.kehadiran.id;
+
+
+--
+-- TOC entry 2837 (class 2604 OID 16399)
+-- Name: kehadiran id; Type: DEFAULT; Schema: public; Owner: dbuser
+--
+
+ALTER TABLE ONLY public.kehadiran ALTER COLUMN id SET DEFAULT nextval('public.kehadiran_id_seq'::regclass);
+
+
+--
+-- TOC entry 2839 (class 2606 OID 16393)
+-- Name: karyawan karyawan_pkey; Type: CONSTRAINT; Schema: public; Owner: dbuser
+--
+
+ALTER TABLE ONLY public.karyawan
+    ADD CONSTRAINT karyawan_pkey PRIMARY KEY (nik);
+
+
+--
+-- TOC entry 2841 (class 2606 OID 16401)
+-- Name: kehadiran kehadiran_pkey; Type: CONSTRAINT; Schema: public; Owner: dbuser
+--
+
+ALTER TABLE ONLY public.kehadiran
+    ADD CONSTRAINT kehadiran_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2842 (class 2606 OID 16402)
+-- Name: kehadiran kehadiran_nik_karyawan_fkey; Type: FK CONSTRAINT; Schema: public; Owner: dbuser
+--
+
+ALTER TABLE ONLY public.kehadiran
+    ADD CONSTRAINT kehadiran_nik_karyawan_fkey FOREIGN KEY (nik_karyawan) REFERENCES public.karyawan(nik);
+
+
+-- Completed on 2020-06-12 07:41:14 WIB
+
+--
+-- PostgreSQL database dump complete
+--
+

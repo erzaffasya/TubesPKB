@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Exec=python3 api.py
+Path=/home/syafiq/Documents/HICAM/hicam_aars/backend
+Icon=/home/syafiq/Documents/HICAM/hicam_aars/shortcuts/database.png
+Terminal=true
+Type=Application
+Name=AARS Backend
+Comment=AARS API
+Version=1.0

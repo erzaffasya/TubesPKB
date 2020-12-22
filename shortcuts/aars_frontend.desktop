@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Exec=yarn serve
+Path=/home/syafiq/Documents/HICAM/hicam_aars/frontend
+Icon=/home/syafiq/Documents/HICAM/hicam_aars/shortcuts/computer.png
+Terminal=true
+Type=Application
+Name=AARS Frontend
+Comment=AARS Frontend
+Version=1.0

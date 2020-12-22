@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Exec=python3 attendance_recording_system.py
+Path=/home/syafiq/Documents/HICAM/hicam_aars/backend
+Icon=/home/syafiq/Documents/HICAM/hicam_aars/shortcuts/camera.png
+Terminal=true
+Type=Application
+Name=Turn On Camera
+Comment=AARS Camera
+Version=1.0
